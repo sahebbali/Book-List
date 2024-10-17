@@ -1,0 +1,129 @@
+/* General Styling */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #1e88e5;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a.active {
+  color: rgb(179, 179, 190);
+  font-weight: bold;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Search and Filter */
+input[type="text"],
+select {
+  padding: 0.75rem;
+  margin: 1rem 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Book List Grid */
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.book-item {
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.book-item:hover {
+  transform: translateY(-10px);
+}
+
+.book-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  transition: opacity 0.3s ease;
+}
+
+.book-item h3 {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  transition: opacity 0.3s ease;
+}
+
+.book-item p {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Hidden description overlay */
+.book-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  text-align: center;
+}
+
+.book-item:hover img {
+  opacity: 0.3;
+}
+
+.book-item:hover .book-description {
+  opacity: 1;
+  visibility: visible;
+}
+
+.book-description h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.book-description p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
