@@ -65,6 +65,8 @@ select {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   cursor: pointer;
+  text-align: center;
+  padding: 5px;
 }
 
 .book-item:hover {
@@ -126,4 +128,8 @@ select {
 .book-description p {
   font-size: 0.95rem;
   line-height: 1.5;
+}
+
+.pagination {
+  padding: 10px;
 }
